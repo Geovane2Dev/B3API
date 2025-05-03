@@ -17,9 +17,11 @@ export default function handler(req, res) {
                 return res.status(400).json({ error: `Ticket not found in the available list. Go to ${process.env.URL}/api/fundamentus/available` });
             }
 
+            const validatedTicket = stockData.ticker; // Use the validated ticker from stockList
+
             return Promise.all([
-                axios.get(`${process.env.URL}/api/fundamentus/${ticket}`),
-                axios.get(`${process.env.URL}/api/quote/${ticket}`)
+                axios.get(`${process.env.URL}/api/fundamentus/${validatedTicket}`),
+                axios.get(`${process.env.URL}/api/quote/${validatedTicket}`)
             ]).then(([fundamentusData, quoteData]) => {
                 const combinedData = {
                     ticket: ticket,
