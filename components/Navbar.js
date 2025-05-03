@@ -22,7 +22,14 @@ const BoostrapNavbar = () => {
               <Link href="/docs" passHref className="btn btn-primary rounded-pill px-4 py-3 text-uppercase" style={{ fontSize: '1rem', fontWeight: '600' }}>Documentação</Link>
             </Nav.Item>
             <Nav.Item>
-              <Link href="https://github.com/GeovaneDev/B3API" passHref className="nav-link d-flex align-items-center" target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://github.com/Geovane2Dev/B3API"
+                passHref
+                className="nav-link d-flex align-items-center"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub Repository"
+              >
                 <FontAwesomeIcon icon={faGithub} size="lg" />
                 <span className="ms-2">GitHub</span>
               </Link>

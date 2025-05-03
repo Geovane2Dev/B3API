@@ -42,26 +42,26 @@ const Introduction = () => {
             <DocsMenu />
           </Col>
           <Col md={9}>
-            <Card className="bg-light rounded shadow-sm">
+            <Card className="bg-light rounded-4 shadow-sm">
               <Card.Body>
-                <h1 className="display-4 text-center mb-4">Introdução da API</h1>
-                <p className="lead text-center">
+                <h1 className="display-5 text-center mb-4 fw-bold">Introdução da API</h1>
+                <p className="text-muted text-center">
                   A B3API é sua fonte confiável para dados em tempo real do mercado de ações brasileiro. Seja você um investidor, desenvolvedor ou entusiasta do mercado financeiro, nossa API oferece acesso fácil e rápido a uma ampla gama de informações financeiras atualizadas.
                 </p>
 
-                <Card className="mt-5">
+                <Card className="mt-5 rounded-3">
                   <Card.Body>
-                    <h2 className="card-title">Dados Disponíveis na API</h2>
+                    <h2 className="card-title fw-semibold">Dados Disponíveis na API</h2>
                     <Card.Text>
                       A B3API oferece uma variedade de dados para atender às necessidades dos usuários, incluindo:
                     </Card.Text>
-                    <ListGroup variant="flush">
+                    <ListGroup variant="flush" className="rounded-3">
                       <ListGroup.Item>Informações fundamentais das empresas listadas na bolsa de valores brasileira.</ListGroup.Item>
                       <ListGroup.Item>Cotações de ações em tempo real, incluindo preços de mercado, volumes de negociação e variações de preço.</ListGroup.Item>
                       <ListGroup.Item>Dados de dividendos, incluindo porcentagens e valores distribuídos nos últimos 12 meses.</ListGroup.Item>
                       <ListGroup.Item>Informações sobre índices financeiros, como CDI e SELIC.</ListGroup.Item>
                     </ListGroup>
-                    <Card.Text className="mt-3">
+                    <Card.Text className="mt-3 text-muted">
                       Esses são apenas alguns exemplos dos dados disponíveis na B3API. Explore nossa documentação completa para descobrir todos os dados e recursos que nossa API tem a oferecer.
                     </Card.Text>
                   </Card.Body>
@@ -69,7 +69,7 @@ const Introduction = () => {
 
                 <div className="text-center mt-5">
                   <Link href="/docs/endpoints" passHref>
-                    <Button variant="primary" size="lg">Explorar Endpoints</Button>
+                    <Button variant="primary" size="lg" className="rounded-pill shadow-sm">Explorar Endpoints</Button>
                   </Link>
                 </div>
               </Card.Body>

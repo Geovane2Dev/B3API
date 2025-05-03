@@ -4,22 +4,45 @@ export default async function handler(request, response) {
     try {
         const apiKey = process.env.APIKEYCRYPTO;
         const coin = request.query.history;
+        const days = request.query.days || '30';
+        const interval = request.query.interval || 'daily';
+        
+        if (!coin) {
+            return response.status(400).json({ error: "Missing 'history' parameter in query" });
+        }
 
         const cryptoResponse = await axios.get(`https://api.coingecko.com/api/v3/coins/${coin}/market_chart`, {
             params: {
-                vs_currency: 'brl',
-                days: `max`,
-                x_cg_demo_api_key: apiKey
-            },
+                vs_currency: 'usd',
+                days: days,
+                interval: interval,
+            }
         });
+
+        if (!cryptoResponse.data || !cryptoResponse.data.prices || cryptoResponse.data.prices.length === 0) {
+            return response.status(404).json({ error: "No historical data found for this coin" });
+        }
+
+        const latestPrice = cryptoResponse.data.prices[cryptoResponse.data.prices.length - 1][1];
+        const latestTimestamp = cryptoResponse.data.prices[cryptoResponse.data.prices.length - 1][0];
+
+        const date = new Date(latestTimestamp);
+        const formattedDate = date.toLocaleString();
+
+        const processedData = {
+            coin: coin,
+            price: latestPrice,
+            formattedDate: formattedDate,
+            historicalData: cryptoResponse.data,
+        };
 
         response.setHeader('Vercel-CDN-Cache-Control', 'max-age=86400');
         response.setHeader('CDN-Cache-Control', 'max-age=86400');
         response.setHeader('Cache-Control', 'max-age=86400');
 
-        const data = cryptoResponse.data;
-        response.status(200).json(data);
+        return response.status(200).json(processedData);
     } catch (error) {
-        response.status(500).json({ error: "Internal server error" });
+        console.error(error);
+        return response.status(500).json({ error: "Internal server error" });
     }
 }

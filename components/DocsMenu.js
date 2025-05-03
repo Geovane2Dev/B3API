@@ -17,23 +17,29 @@ const DocsMenu = () => {
         </Card.Title>
         <ListGroup variant="flush">
           <ListGroup.Item className="border-0 p-0 mb-2">
-            <Link href="/docs/introduction" passHref
-                className={`text-decoration-none d-block py-2 px-3 rounded transition ${
-                  router.pathname === '/docs/introduction' ? 'bg-primary text-white' : 'text-dark'
-                }`}
-                style={{ fontSize: '1.2rem', fontWeight: '500' }}
-              >
-                <FontAwesomeIcon icon={faInfoCircle} className="me-2" /> Introdução
+            <Link
+              href="/docs/introduction"
+              passHref
+              className={`text-decoration-none d-block py-2 px-3 rounded transition ${
+                router.pathname === '/docs/introduction' ? 'bg-primary text-white' : 'text-dark'
+              }`}
+              style={{ fontSize: '1.2rem', fontWeight: '500' }}
+              aria-current={router.pathname === '/docs/introduction' ? 'page' : undefined}
+            >
+              <FontAwesomeIcon icon={faInfoCircle} className="me-2" /> Introdução
             </Link>
           </ListGroup.Item>
           <ListGroup.Item className="border-0 p-0 mb-2">
-            <Link href="/docs/endpoints" passHref
-                className={`text-decoration-none d-block py-2 px-3 rounded transition ${
-                  router.pathname === '/docs/endpoints' ? 'bg-primary text-white' : 'text-dark'
-                }`}
-                style={{ fontSize: '1.2rem', fontWeight: '500' }}
-              >
-                <FontAwesomeIcon icon={faLink} className="me-2" /> Endpoints
+            <Link
+              href="/docs/endpoints"
+              passHref
+              className={`text-decoration-none d-block py-2 px-3 rounded transition ${
+                router.pathname === '/docs/endpoints' ? 'bg-primary text-white' : 'text-dark'
+              }`}
+              style={{ fontSize: '1.2rem', fontWeight: '500' }}
+              aria-current={router.pathname === '/docs/endpoints' ? 'page' : undefined}
+            >
+              <FontAwesomeIcon icon={faLink} className="me-2" /> Endpoints
             </Link>
           </ListGroup.Item>
         </ListGroup>

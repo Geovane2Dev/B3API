@@ -1,23 +1,19 @@
 import axios from 'axios';
-import cheerio from 'cheerio';
+import * as cheerio from 'cheerio';
 import iconv from 'iconv-lite';
 
 export default async function handler(request, response) {
     let { ticket } = request.query;
 
     try {
-        // Faz uma solicitação para obter a lista de ações disponíveis
         const { data: { data: stockList } } = await axios.get(`${process.env.URL}/api/fundamentus/available`);
 
-        // Verifica se o ticket fornecido é uma string
         if (typeof ticket !== 'string') {
             return response.status(400).json({ error: 'Invalid input. Ticket must be a string.' });
         }
 
-        // Converte o ticket para maiúsculas
         ticket = ticket.toUpperCase();
 
-        // Verifica se o ticket fornecido está na lista de ações disponíveis
         const isTicketAvailable = stockList.some(stock => stock.ticker === ticket);
 
         if (!isTicketAvailable) {
@@ -41,7 +37,7 @@ export default async function handler(request, response) {
 
         const $ = cheerio.load(decodedResponse, { decodeEntities: false });
 
-        const removeNewLines = (str) => str.replace(/\n/g, '');
+        const removeNewLines = (str) => str.replace(/\s+/g, ' ').trim();
 
         const data = {
             papel: removeNewLines($('table:nth-child(2) tr:nth-child(1) td:nth-child(2)').text()),
@@ -100,7 +96,7 @@ export default async function handler(request, response) {
 
         response.status(200).json(data);
     } catch (error) {
-        console.error(error);
+        console.error("Error in /api/fundamentus/[ticket]:", error);
         response.status(500).json({ error: 'Internal server error' });
     }
 }

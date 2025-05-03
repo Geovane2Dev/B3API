@@ -13,10 +13,10 @@ const HeroSection = () => {
         <div className="row">
           <div className="col-lg-12">
             <div className="hero-content">
-              <Image src="/B3API.png" width={140} height={140} alt="B3API logo" priority={true} />
-              <h1 className="hero-title display-3 fw-bold">B3API</h1>
+              <Image src="/B3API.png" width={140} height={140} alt="B3API logo" priority={true} className="rounded-circle" />
+              <h1 className="hero-title display-4 fw-bold">B3API</h1>
               <p className="lead text-muted fs-5 mb-4">Sua fonte confiável de dados em tempo real sobre ações, cotações e índices do mercado financeiro brasileiro.</p>
-              <Link href="/docs" className="btn btn-primary btn-lg rounded-pill shadow-lg py-3">Comece Agora</Link>
+              <Link href="/docs" className="btn btn-primary btn-lg rounded-pill shadow-sm py-3 px-5">Comece Agora</Link>
             </div>
           </div>
         </div>
@@ -43,11 +43,11 @@ const FeatureSection = () => {
 const FeatureItem = ({ title, text, color, icon }) => {
   return (
     <div className="col-lg-4 mb-4">
-      <div className={`card text-dark bg-${color} bg-opacity-25 shadow-lg rounded-pill py-4`}>
+      <div className={`card text-dark bg-${color} bg-opacity-25 shadow-sm rounded-4 py-4`}>
         <div className="card-body">
           <i className={`fas fa-${icon} fa-3x mb-3`} />
           <h5 className="card-title fw-bold">{title}</h5>
-          <p className="card-text">{text}</p>
+          <p className="card-text text-muted">{text}</p>
         </div>
       </div>
     </div>
