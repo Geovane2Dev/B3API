@@ -21,7 +21,7 @@ const TermsOfService = () => {
           description: 'Consulte os Termos de Uso da B3API para orientações sobre o uso da API. Ao acessar nossos serviços, você aceita os termos e políticas aplicáveis.',
           images: [
             {
-              url: 'https://b3api.me/B3API.png',
+              url: 'https://b3api.g2dev.me/B3API.png',
               width: 120,
               height: 120,
               alt: 'B3API Icon',

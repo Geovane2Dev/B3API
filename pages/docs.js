@@ -23,7 +23,7 @@ const Docs = () => {
           description: 'Explore a B3API, sua fonte confiável para dados em tempo real do mercado de ações brasileiro. Inicie sua jornada com nossa documentação completa e comece a utilizar a API hoje mesmo para obter informações precisas e atualizadas.',
           images: [
             {
-              url: 'https://b3api.me/B3API.png',
+              url: 'https://b3api.g2dev.me/B3API.png',
               width: 120,
               height: 120,
               alt: 'B3API Icon',

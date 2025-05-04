@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     description: 'A B3API oferece dados financeiros brasileiros confiáveis e em tempo real. Experimente nossa API B3 líder no mercado agora!',
     images: [
       {
-        url: 'https://b3api.me/B3API.png',
+        url: 'http://b3api.g2dev.me/B3API.png',
         width: 120,
         height: 120,
         alt: 'B3API Icon',
