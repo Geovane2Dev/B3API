@@ -1,5 +1,7 @@
 import axios from 'axios';
 
+const cacheAge = process.env.CacheAge || '7200';
+
 export default async function handler(request, response) {
     try {
         const apiKey = process.env.APIKEYCRYPTO;
@@ -36,9 +38,9 @@ export default async function handler(request, response) {
             historicalData: cryptoResponse.data,
         };
 
-        response.setHeader('Vercel-CDN-Cache-Control', 'max-age=86400');
-        response.setHeader('CDN-Cache-Control', 'max-age=86400');
-        response.setHeader('Cache-Control', 'max-age=86400');
+        response.setHeader('Vercel-CDN-Cache-Control', `max-age=${cacheAge}`);
+        response.setHeader('CDN-Cache-Control', `max-age=${cacheAge}`);
+        response.setHeader('Cache-Control', `max-age=${cacheAge}`);
 
         return response.status(200).json(processedData);
     } catch (error) {

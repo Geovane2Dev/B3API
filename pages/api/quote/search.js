@@ -1,5 +1,7 @@
 import axios from 'axios';
 
+const cacheAge = process.env.CacheAge || '7200';
+
 export default async (request, response) => {
     try {
         const apiUrl = `${process.env.URL}/api/quote/result`;
@@ -23,9 +25,9 @@ export default async (request, response) => {
             indexes: allData.indexes.filter(index => index.stock.toUpperCase().includes(queryUpperCase) || index.name.toUpperCase().includes(queryUpperCase)),
         };
 
-        response.setHeader('Vercel-CDN-Cache-Control', 'max-age=86400');
-        response.setHeader('CDN-Cache-Control', 'max-age=86400');
-        response.setHeader('Cache-Control', 'max-age=86400');
+        response.setHeader('Vercel-CDN-Cache-Control', `max-age=${cacheAge}`);
+        response.setHeader('CDN-Cache-Control', `max-age=${cacheAge}`);
+        response.setHeader('Cache-Control', `max-age=${cacheAge}`);
 
         console.log('Response status: 200');
         response.status(200).json({ data: filteredData });

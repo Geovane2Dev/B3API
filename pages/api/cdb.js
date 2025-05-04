@@ -1,5 +1,7 @@
 import axios from 'axios';
 
+const cacheAge = process.env.CacheAge || '7200';
+
 export default async (req, res) => {
   try {
     // URL do env
@@ -43,6 +45,11 @@ export default async (req, res) => {
 
     // Calcular o valor total (capital + juro com desconto de imposto de renda)
     const totalValue = initialPrincipal + interest * (1 - incomeTaxRate);
+
+    // Set cache headers
+    res.setHeader('Vercel-CDN-Cache-Control', `max-age=${cacheAge}`);
+    res.setHeader('CDN-Cache-Control', `max-age=${cacheAge}`);
+    res.setHeader('Cache-Control', `max-age=${cacheAge}`);
 
     // Responder com os dados do CDB calculados
     res.status(200).json({

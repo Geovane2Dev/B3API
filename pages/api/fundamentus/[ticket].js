@@ -2,6 +2,8 @@ import axios from 'axios';
 import * as cheerio from 'cheerio';
 import iconv from 'iconv-lite';
 
+const cacheAge = process.env.CacheAge || '7200';
+
 export default async function handler(request, response) {
     let { ticket } = request.query;
 
@@ -90,9 +92,9 @@ export default async function handler(request, response) {
         };
 
         // Cache da Vercel
-        response.setHeader('Vercel-CDN-Cache-Control', 'max-age=86400');
-        response.setHeader('CDN-Cache-Control', 'max-age=86400');
-        response.setHeader('Cache-Control', 'max-age=86400');
+        response.setHeader('Vercel-CDN-Cache-Control', `max-age=${cacheAge}`);
+        response.setHeader('CDN-Cache-Control', `max-age=${cacheAge}`);
+        response.setHeader('Cache-Control', `max-age=${cacheAge}`);
 
         response.status(200).json(data);
     } catch (error) {

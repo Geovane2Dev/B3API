@@ -11,6 +11,8 @@ const apiKeys = [
 ];
 let currentApiKeyIndex = 0;
 
+const cacheAge = process.env.CacheAge || '7200';
+
 async function selic(request, response) {
   try {
     const maxAttempts = 3;
@@ -38,9 +40,9 @@ async function selic(request, response) {
           cdiDaily: results[0].cdi_daily,
         };
 
-        response.setHeader('Vercel-CDN-Cache-Control', 'max-age=172800');
-        response.setHeader('CDN-Cache-Control', 'max-age=172800');
-        response.setHeader('Cache-Control', 'max-age=172800');
+        response.setHeader('Vercel-CDN-Cache-Control', `max-age=${cacheAge}`);
+        response.setHeader('CDN-Cache-Control', `max-age=${cacheAge}`);
+        response.setHeader('Cache-Control', `max-age=${cacheAge}`);
 
         return response.status(200).json(simplifiedData);
       } else if (axiosResponse.status === 403) {

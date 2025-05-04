@@ -1,5 +1,7 @@
 import axios from 'axios';
 
+const cacheAge = process.env.CacheAge || '7200';
+
 async function apiAvailable(request, response) {
     try {
         // Usa o get para puxar dados da API
@@ -14,9 +16,9 @@ async function apiAvailable(request, response) {
         };
 
         // Cache da Vercel
-        response.setHeader('Vercel-CDN-Cache-Control', 'max-age=86400');
-        response.setHeader('CDN-Cache-Control', 'max-age=86400');
-        response.setHeader('Cache-Control', 'max-age=86400');
+        response.setHeader('Vercel-CDN-Cache-Control', `max-age=${cacheAge}`);
+        response.setHeader('CDN-Cache-Control', `max-age=${cacheAge}`);
+        response.setHeader('Cache-Control', `max-age=${cacheAge}`);
 
         // Responde com a resposta em JSON
         return response.json(processedData);

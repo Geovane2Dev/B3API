@@ -1,5 +1,7 @@
 import axios from 'axios';
 
+const cacheAge = process.env.CacheAge || '7200';
+
 async function quote(request, response) {
   try {
     const { id } = request.query;
@@ -50,9 +52,9 @@ async function quote(request, response) {
       ...restData,
     };
 
-    response.setHeader('Vercel-CDN-Cache-Control', 'max-age=21600');
-    response.setHeader('CDN-Cache-Control', 'max-age=21600');
-    response.setHeader('Cache-Control', 'max-age=21600');
+    response.setHeader('Vercel-CDN-Cache-Control', `max-age=${cacheAge}`);
+    response.setHeader('CDN-Cache-Control', `max-age=${cacheAge}`);
+    response.setHeader('Cache-Control', `max-age=${cacheAge}`);
 
     console.log("Response status: 200, Data:", simplifiedData);
     return response.status(200).json(simplifiedData);

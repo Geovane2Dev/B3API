@@ -1,5 +1,7 @@
 import axios from 'axios';
 
+const cacheAge = process.env.CacheAge || '7200';
+
 export default async (request, response) => {
     try {
         const [availableStocksResponse, { query }] = await Promise.all([
@@ -25,9 +27,9 @@ export default async (request, response) => {
             (stock.ticker.includes(queryUpperCase) || stock.name.toUpperCase().includes(queryUpperCase)) && stockIndex[stock.ticker]
         );
 
-        response.setHeader('Vercel-CDN-Cache-Control', 'max-age=86400');
-        response.setHeader('CDN-Cache-Control', 'max-age=86400');
-        response.setHeader('Cache-Control', 'max-age=86400');
+        response.setHeader('Vercel-CDN-Cache-Control', `max-age=${cacheAge}`);
+        response.setHeader('CDN-Cache-Control', `max-age=${cacheAge}`);
+        response.setHeader('Cache-Control', `max-age=${cacheAge}`);
 
         console.log('Response status: 200');
         response.status(200).json({ data: filteredStocks });

@@ -11,6 +11,8 @@ const apiKeys = [
 ];
 let currentApiKeyIndex = 0;
 
+const cacheAge = process.env.CacheAge || '7200';
+
 async function quotations(request, response) {
   try {
     const maxAttempts = 3;
@@ -64,9 +66,9 @@ async function quotations(request, response) {
         };
 
         // Cache da Vercel
-        response.setHeader('Vercel-CDN-Cache-Control', 'max-age=86400');
-        response.setHeader('CDN-Cache-Control', 'max-age=86400');
-        response.setHeader('Cache-Control', 'max-age=86400');
+        response.setHeader('Vercel-CDN-Cache-Control', `max-age=${cacheAge}`);
+        response.setHeader('CDN-Cache-Control', `max-age=${cacheAge}`);
+        response.setHeader('Cache-Control', `max-age=${cacheAge}`);
 
         // Retorna em JSON
         return response.json(simplifiedData);

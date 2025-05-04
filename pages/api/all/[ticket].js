@@ -1,5 +1,7 @@
 import axios from 'axios';
 
+const cacheAge = process.env.CacheAge || '7200';
+
 export default function handler(req, res) {
     let { ticket } = req.query;
 
@@ -30,7 +32,7 @@ export default function handler(req, res) {
                     stockData: stockData,
                 };
 
-                const cacheControlHeader = 'max-age=86400';
+                const cacheControlHeader = `max-age=${cacheAge}`;
                 res.setHeader('Vercel-CDN-Cache-Control', cacheControlHeader);
                 res.setHeader('CDN-Cache-Control', cacheControlHeader);
                 res.setHeader('Cache-Control', cacheControlHeader);
