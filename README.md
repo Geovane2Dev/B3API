@@ -2,7 +2,7 @@
 
 ![BrInvestidor](https://github.com/GeovaneDev/B3API/assets/87013843/dbcde03e-298f-4e78-831f-2b9fa3e8c6c3)
 
-[https://b3api.me](https://b3api.g2dev.me/) - Sua fonte para dados em tempo real do mercado de ações brasileiro.
+[https://b3api.g2dev.me](https://b3api.g2dev.me/) - Sua fonte para dados em tempo real do mercado de ações brasileiro.
 
 ## Sobre
 
