@@ -1,6 +1,10 @@
 # B3API
 
-![BrInvestidor](https://github.com/GeovaneDev/B3API/assets/87013843/dbcde03e-298f-4e78-831f-2b9fa3e8c6c3)
+## ⚠️ Aviso Importante:
+#### O domínio b3api.me foi descontinuado e agora utilizamos b3api.g2dev.me. A mudança foi feita por decisão de não renovar o domínio anterior.
+#### Atualize a URL da API em seus projetos para garantir o funcionamento correto.
+
+![B3API](https://github.com/GeovaneDev/B3API/assets/87013843/dbcde03e-298f-4e78-831f-2b9fa3e8c6c3)
 
 [https://b3api.g2dev.me](https://b3api.g2dev.me/) - Sua fonte para dados em tempo real do mercado de ações brasileiro.
 
@@ -11,7 +15,7 @@ A B3API foi concebida para proporcionar aos desenvolvedores acesso fácil e ráp
 ## Funcionalidades
 
 - Acesse uma ampla gama de dados do mercado de ações, incluindo métricas e índices financeiros.
-- Mantenha-se informado com dados do mercado de ações em tempo real e atualizados.
+- Mantenha-se informado com dados do mercado de ações atualizados.
 - Integração simples e fácil em suas aplicações com nossa API amigável para desenvolvedores.
 
 ## Como Começar
