@@ -13,11 +13,11 @@ const Docs = () => {
       <NextSeo
         title="B3API - Documentação da API | Dados Financeiros Brasileiros em Tempo Real"
         description="Explore a B3API, sua fonte confiável para dados em tempo real do mercado de ações brasileiro. Inicie sua jornada com nossa documentação completa e comece a utilizar a API hoje mesmo para obter informações precisas e atualizadas."
-        canonical="https://b3api.me/docs"
+        canonical="https://b3api.g2dev.me/docs"
         openGraph={{
           type: 'website',
           locale: 'pt_BR',
-          url: 'https://b3api.me/docs',
+          url: 'https://b3api.g2dev.me/docs',
           site_name: 'B3API - Documentação da API',
           title: 'B3API - Documentação da API | Dados em Tempo Real do Mercado de Ações Brasileiro',
           description: 'Explore a B3API, sua fonte confiável para dados em tempo real do mercado de ações brasileiro. Inicie sua jornada com nossa documentação completa e comece a utilizar a API hoje mesmo para obter informações precisas e atualizadas.',

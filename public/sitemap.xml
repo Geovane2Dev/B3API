@@ -2,31 +2,31 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
-    <loc>https://b3api.me/</loc>
+    <loc>https://b3api.g2dev.me/</loc>
     <lastmod>2024-06-16T12:11:18+00:00</lastmod>
     <priority>1.00</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://b3api.me/docs</loc>
+    <loc>https://b3api.g2dev.me/docs</loc>
     <lastmod>2024-06-16T12:11:18+00:00</lastmod>
     <priority>0.80</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://b3api.me/terms</loc>
+    <loc>https://b3api.g2dev.me/terms</loc>
     <lastmod>2024-06-16T12:11:18+00:00</lastmod>
     <priority>0.80</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://b3api.me/docs/introduction</loc>
+    <loc>https://b3api.g2dev.me/docs/introduction</loc>
     <lastmod>2024-06-16T12:11:18+00:00</lastmod>
     <priority>0.70</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://b3api.me/docs/endpoints</loc>
+    <loc>https://b3api.g2dev.me/docs/endpoints</loc>
     <lastmod>2024-06-16T12:11:18+00:00</lastmod>
     <priority>0.70</priority>
     <changefreq>weekly</changefreq>

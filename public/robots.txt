@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /api/
 Disallow: /cgi-bin/
-Sitemap: https://b3api.me/sitemap.xml
+Sitemap: https://b3api.g2dev.me/sitemap.xml

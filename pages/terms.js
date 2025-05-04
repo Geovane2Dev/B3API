@@ -11,11 +11,11 @@ const TermsOfService = () => {
       <NextSeo
         title="B3API - Termos de Uso | Políticas de Acesso e Uso da API B3"
         description="Consulte os Termos de Uso da B3API para orientações sobre o uso da API. Ao acessar nossos serviços, você aceita os termos e políticas aplicáveis."
-        canonical="https://b3api.me/terms"
+        canonical="https://b3api.g2dev.me/terms"
         openGraph={{
           type: 'website',
           locale: 'pt_BR',
-          url: 'https://b3api.me/terms',
+          url: 'https://b3api.g2dev.me/terms',
           site_name: 'B3API - Termos de Uso | Políticas de Acesso e Uso da API B3',
           title: 'B3API - Termos de Uso | Políticas de Acesso e Uso da API B3',
           description: 'Consulte os Termos de Uso da B3API para orientações sobre o uso da API. Ao acessar nossos serviços, você aceita os termos e políticas aplicáveis.',

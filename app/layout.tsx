@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'pt_BR',
-    url: 'https://b3api.me/',
+    url: 'https://b3api.g2dev.me/',
     title: 'B3API - Dados Financeiros Brasileiros em Tempo Real | API B3 Líder no Mercado',
     description: 'A B3API oferece dados financeiros brasileiros confiáveis e em tempo real. Experimente nossa API B3 líder no mercado agora!',
     images: [

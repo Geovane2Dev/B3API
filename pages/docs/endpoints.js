@@ -13,11 +13,11 @@ const Endpoints = () => {
       <NextSeo
         title="B3API - Documentação dos Endpoints | Acesse Dados Financeiros Brasileiros em Tempo Real"
         description="Explore a documentação completa dos endpoints da B3API para acessar dados financeiros brasileiros em tempo real. Descubra como utilizar cada endpoint de forma eficiente e obtenha informações precisas para suas análises e aplicações."
-        canonical="https://b3api.me/docs/endpoints"
+        canonical="https://b3api.g2dev.me/docs/endpoints"
         openGraph={{
           type: 'website',
           locale: 'pt_BR',
-          url: 'https://b3api.me/docs/endpoints',
+          url: 'https://b3api.g2dev.me/docs/endpoints',
           site_name: 'B3API - Documentação dos Endpoints',
           title: 'B3API - Documentação dos Endpoints | Acesse Dados Financeiros Brasileiros em Tempo Real',
           description: 'Explore a documentação completa dos endpoints da B3API para acessar dados financeiros brasileiros em tempo real. Descubra como utilizar cada endpoint de forma eficiente e obtenha informações precisas para suas análises e aplicações.',
