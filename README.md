@@ -1,12 +1,11 @@
 # B3API
 
 ## ⚠️ Aviso Importante:
-#### O domínio b3api.me foi descontinuado e agora utilizamos b3api.g2dev.me. A mudança foi feita por decisão de não renovar o domínio anterior.
-#### Atualize a URL da API em seus projetos para garantir o funcionamento correto.
+#### Informamos que este projeto foi descontinuado e arquivado. A partir deste momento, não receberá mais atualizações.
 
 ![B3API](https://github.com/GeovaneDev/B3API/assets/87013843/dbcde03e-298f-4e78-831f-2b9fa3e8c6c3)
 
-[https://b3api.g2dev.me](https://b3api.g2dev.me/) - Sua fonte para dados em tempo real do mercado de ações brasileiro.
+Sua fonte para dados em tempo real do mercado de ações brasileiro.
 
 ## Sobre
 
